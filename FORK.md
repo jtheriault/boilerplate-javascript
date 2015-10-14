@@ -9,7 +9,9 @@
 ## Node Version
 Switch from "stable" to a specific version 
 * .nvmrc
-* .travis.yml
+
+## README
+* Update path for Travis build
 
 ## Copyright
 If you are me (Joseph Theriault) be sure to update the copyright year in LICENSE.
