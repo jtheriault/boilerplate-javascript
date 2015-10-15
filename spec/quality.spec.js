@@ -1,4 +1,4 @@
 'use strict';
-var followsGuidelines = require('./describe-source');
+var followsGuidelines = require('code-copter');
 
 describe('Code quality', followsGuidelines);
