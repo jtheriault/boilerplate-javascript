@@ -3,8 +3,8 @@ var followsGuidelines = require('code-copter'),
     guide = followsGuidelines.analyzers;
 
 followsGuidelines.configure({
-    jscs: guide.jscs,
-    jshint: guide.jshint,
+    jscs: true,
+    jshint: true,
     peers: guide.requirePeers
 });
 
