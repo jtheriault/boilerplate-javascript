@@ -1,11 +1,11 @@
 'use strict';
-var followsGuidelines = require('code-copter'),
-    guide = followsGuidelines.analyzers;
+var codeCopter = require('code-copter'),
+    shortrequire = require('code-copter-analyzer-shortrequire');
 
-followsGuidelines.configure({
+codeCopter.configure({
     jscs: true,
     jshint: true,
-    peers: guide.requirePeers
+    shortrequire: shortrequire
 });
 
-describe('Code quality', followsGuidelines);
+describe('Code quality', codeCopter);
