@@ -1,11 +1,10 @@
 'use strict';
-var codeCopter = require('code-copter'),
-    shortrequire = require('code-copter-analyzer-shortrequire');
+var codeCopter = require('code-copter');
 
 codeCopter.configure({
     jscs: true,
     jshint: true,
-    shortrequire: shortrequire
+    shortrequire: true
 });
 
 describe('Code quality', codeCopter);
