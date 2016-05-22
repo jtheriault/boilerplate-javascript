@@ -1,11 +1,14 @@
 {
+  "private": true,
   "name": "boilerplate-javascript",
   "version": "0.0.9",
   "description": "Project boilerplate including basic docs, style guide, build, testing, and CI configuration.",
   "scripts": {
-    "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover `which jasmine`",
+    "clean": "rm -r coverage/ node_modules",
+    "docs": "jsdoc2md src/*.js --template src/README.hbs > README.md",
+    "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
     "posttest": "istanbul check-coverage",
-    "watch:test": "nodemon -x npm test"
+    "watch:test": "nodemon -w src -x npm test"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
     "code-copter-analyzer-shortrequire": "^1.0.1",
     "istanbul": "^0.3.22",
     "jasmine": "~2.3.2",
+    "jsdoc-to-markdown": "~1.3.6",
     "nodemon": "~1.7.1"
   }
 }
