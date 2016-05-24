@@ -10,7 +10,7 @@
 Switch from "stable" to a specific version 
 * .nvmrc
 
-## README
+## README.hbs
 * Update path for Travis build
 
 ## Copyright
