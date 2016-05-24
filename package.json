@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rm -r coverage/ node_modules",
     "docs": "jsdoc2md src/*.js --template src/README.hbs > README.md",
+    "ls:todo": "egrep -nr '\\W+TODO\\W+.*$' src/ || echo 'Nothing to do.'",
     "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
     "posttest": "istanbul check-coverage",
     "watch:test": "nodemon -w src -x npm test"
