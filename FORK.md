@@ -7,8 +7,7 @@
 * keywords
 
 ## Node Version
-Switch from "stable" to a specific version 
-* .nvmrc
+Switch to appropriate in .nvmrc (periodically updated to latest LTS)
 
 ## README.hbs
 * Update path for Travis build
