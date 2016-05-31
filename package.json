@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "boilerplate-javascript",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Project boilerplate including basic docs, style guide, build, testing, and CI configuration.",
   "scripts": {
     "clean": "rm -r coverage/ node_modules",
