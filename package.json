@@ -4,14 +4,14 @@
   "version": "0.1.0",
   "description": "Project boilerplate including basic docs, style guide, build, testing, and CI configuration.",
   "scripts": {
-    "clean": "rm -r coverage/ node_modules",
+    "clean": "rm -rf coverage/ node_modules npm-shrinkwrap.json",
     "docs": "jsdoc2md src/*.js --template src/README.hbs > README.md",
     "ls:todo": "egrep -nr '\\W+TODO\\W+.*$' src/ || echo 'Nothing to do.'",
-    "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
-    "prepublish": "npm shrinkwrap",
+    "prepublish": "(in-publish && npm shrinkwrap) || (! in-publish && echo 'Skipping prepublish step')",
     "preshrinkwrap": "rm -f npm-shrinkwrap.json",
     "posttest": "istanbul check-coverage",
     "postversion": "npm publish",
+    "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
     "watch:test": "nodemon -w src -x npm test"
   },
   "repository": {
@@ -30,6 +30,7 @@
   "devDependencies": {
     "code-copter": "^1.5.0",
     "code-copter-analyzer-shortrequire": "^1.0.1",
+    "in-publish": "^2.0.0",
     "istanbul": "^0.3.22",
     "jasmine": "~2.3.2",
     "jsdoc-to-markdown": "~1.3.6",
